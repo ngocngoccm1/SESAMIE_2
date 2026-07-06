@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html class="dark" lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SESAMIE | Asia Kitchen & Sushi</title>
+    <meta content="Modern Asian Kitchen & Sushi in Ingolstadt. Speisekarte, Reservierung und Online-Bestellung."
+        name="description" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        surface: "#1a120b",
+                        "secondary-container": "#484741",
+                        "on-tertiary": "#4c2700",
+                        "surface-bright": "#42372f",
+                        "on-primary-fixed-variant": "#574335",
+                        "outline-variant": "#4f453f",
+                        tertiary: "#ffb779",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#705a4c",
+                        "inverse-surface": "#f1dfd3",
+                        "tertiary-fixed-dim": "#ffb779",
+                        "on-tertiary-fixed": "#2e1500",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#382f26",
+                        "on-tertiary-fixed-variant": "#6c3a00",
+                        "on-tertiary-container": "#d38437",
+                        outline: "#9b8e87",
+                        "on-secondary": "#31302b",
+                        "warm-paper": "#E8E2D6",
+                        "surface-dim": "#1a120b",
+                        "primary-fixed": "#fbddca",
+                        "on-surface-variant": "#d2c4bc",
+                        "on-primary-container": "#ac9181",
+                        "earth-shadow": "#2A1E16",
+                        "primary-container": "#3d2b1f",
+                        "surface-container-high": "#322820",
+                        "surface-container-lowest": "#140d06",
+                        primary: "#dec1af",
+                        "on-primary": "#3f2c20",
+                        "on-primary-fixed": "#28180d",
+                        "on-secondary-container": "#b8b5ae",
+                        "tertiary-fixed": "#ffdcc1",
+                        "surface-container-highest": "#3d332b",
+                        error: "#ffb4ab",
+                        "secondary-fixed-dim": "#c9c6bf",
+                        "secondary-fixed": "#e6e2da",
+                        "on-surface": "#f1dfd3",
+                        secondary: "#c9c6bf",
+                        background: "#1a120b",
+                        "bronze-glimmer": "#A67C52",
+                        "tertiary-container": "#4a2600",
+                        "on-error": "#690005",
+                        "surface-tint": "#dec1af",
+                        "surface-container": "#271e16",
+                        "on-secondary-fixed-variant": "#484741",
+                        "primary-fixed-dim": "#dec1af",
+                        "surface-variant": "#3d332b",
+                        "surface-container-low": "#221a13",
+                        "on-background": "#f1dfd3",
+                        "on-secondary-fixed": "#1c1c17"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        unit: "8px",
+                        "section-padding": "120px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        gutter: "24px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+                        "display-lg-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "display-lg": ["64px", { lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.1em", fontWeight: "600" }],
+                        "headline-lg": ["48px", { lineHeight: "56px", fontWeight: "600" }],
+                        "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "500" }]
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="./assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-bronze-glimmer selection:text-white">
+    <nav class="site-header fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md" data-header>
+        <div class="flex justify-between items-center px-6 md:px-margin-desktop py-4 max-w-container-max mx-auto">
+            <div class="brand-mark font-headline-md text-headline-md text-bronze-glimmer tracking-tighter">SESAMIE</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <span class="tab-link active font-body-md text-body-md uppercase tracking-widest" data-tab="home"
+                    data-i18n="nav.home">Home</span>
+                <span class="tab-link font-body-md text-body-md uppercase tracking-widest text-on-surface"
+                    data-tab="menu" data-i18n="nav.menu">Speisekarte</span>
+                <a class="tab-link font-body-md text-body-md uppercase tracking-widest text-on-surface"
+                    href="https://www.foodbooking.com/api/res/8_yjp4" data-i18n="nav.reserve">Reservierung</a>
+                <a class="tab-link font-body-md text-body-md uppercase tracking-widest text-on-surface"
+                    href="https://www.foodbooking.com/api/fb/8_yjp4">
+                    <span data-i18n="nav.order">Bestellen</span>
+                </a>
+                <span class="tab-link font-body-md text-body-md uppercase tracking-widest text-on-surface"
+                    data-tab="contact" data-i18n="nav.contact">Kontakt</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="language-switch" role="group" aria-label="Language switch">
+                    <button class="is-active" data-language-switch="de" type="button">DE</button>
+                    <button data-language-switch="en" type="button">EN</button>
+                </div>
+            </div>
+        </div>
+        <div
+            class="md:hidden flex items-center gap-6 px-6 py-2 border-t border-outline-variant/30 overflow-x-auto no-scrollbar tab-links-mobile bg-surface/80">
+            <span class="tab-link font-label-sm text-label-sm uppercase tracking-widest text-on-surface" data-tab="home"
+                data-i18n="nav.home">Home</span>
+            <span class="tab-link active font-label-sm text-label-sm uppercase tracking-widest" data-tab="menu"
+                data-i18n="nav.menu">Speisekarte</span>
+            <a class="tab-link font-label-sm text-label-sm uppercase tracking-widest text-on-surface"
+                href="https://www.foodbooking.com/api/res/8_yjp4" data-i18n="nav.reserve">Reservierung</a>
+            <a class="tab-link font-label-sm text-label-sm uppercase tracking-widest text-on-surface whitespace-nowrap"
+                href="https://www.foodbooking.com/api/fb/8_yjp4">
+                <span data-i18n="nav.order">Bestellen</span>
+            </a>
+            <span class="tab-link font-label-sm text-label-sm uppercase tracking-widest text-on-surface"
+                data-tab="contact" data-i18n="nav.contact">Kontakt</span>
+        </div>
+    </nav>
+
+    <main>
+        <div class="tab-content" id="home">
+            <section class="relative h-screen flex items-center justify-center overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <img class="w-full h-full object-cover opacity-60" src="./assets/images/site/hero-home.jpg" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-surface/40 via-transparent to-surface"></div>
+                </div>
+                <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop">
+                    <span
+                        class="inline-block mb-6 font-label-lg text-label-lg uppercase tracking-[0.3em] text-bronze-glimmer"
+                        data-i18n="hero.eyebrow">
+                        COMING SOON
+                    </span>
+                    <h1 class="brand-mark font-display-lg text-display-lg md:text-display-lg leading-tight mb-6 max-w-4xl mx-auto"
+                        data-i18n="hero.title">
+                        SESAMIE
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto mb-10 whitespace-pre-line"
+                        data-i18n="hero.subtitle">
+                        Einzigartige Geschmackserlebnisse in Ingolstadt. Wo Tradition auf Innovation trifft.
+                    </p>
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                        <a class="bg-bronze-glimmer text-white px-10 py-5 font-label-lg text-label-lg uppercase tracking-widest hover:bg-bronze-glimmer/90 transition-all bronze-glow"
+                            href="https://www.foodbooking.com/api/res/8_yjp4">
+                            <span data-i18n="hero.reserve">Tisch reservieren</span>
+                        </a>
+                        <a class="border border-bronze-glimmer text-bronze-glimmer px-10 py-5 font-label-lg text-label-lg uppercase tracking-widest hover:bg-bronze-glimmer hover:text-white transition-all"
+                            href="https://www.foodbooking.com/api/fb/8_yjp4">
+                            <span data-i18n="hero.order">Online bestellen</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+                    <span
+                        class="material-symbols-outlined text-bronze-glimmer text-4xl">keyboard_double_arrow_down</span>
+                </div>
+            </section>
+
+            <section class="py-section-padding bg-surface-container-low" id="philosophy">
+                <div
+                    class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+                    <div class="reveal-on-scroll">
+                        <div class="relative">
+                            <div
+                                class="absolute -top-10 -left-10 w-40 h-40 border-t-2 border-l-2 border-bronze-glimmer/30">
+                            </div>
+                            <img class="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                src="./assets/images/site/philosophy.jpg" />
+                            <div
+                                class="absolute -bottom-10 -right-10 w-40 h-40 border-b-2 border-r-2 border-bronze-glimmer/30">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal-on-scroll">
+                        <h2 class="font-headline-lg text-headline-lg text-bronze-glimmer mb-8"
+                            data-i18n="home.philosophyEyebrow">Philosophie &amp; Handwerk</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed"
+                            data-i18n="home.philosophyBodyOne"></p>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed"
+                            data-i18n="home.philosophyBodyTwo"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-section-padding bg-surface" hidden>
+                <div class="max-w-container-max mx-auto px-margin-desktop mb-20 text-center">
+                    <span class="font-label-lg text-label-lg uppercase tracking-[0.3em] text-bronze-glimmer mb-4 block"
+                        data-i18n="home.featuredEyebrow">Auswahl des Hauses</span>
+                    <h2 class="font-headline-lg text-headline-lg" data-i18n="home.featuredTitle">Kulinarische Highlights
+                    </h2>
+                </div>
+                <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter"
+                    data-featured-menu></div>
+            </section>
+
+            <section class="relative py-section-padding bg-earth-shadow overflow-hidden">
+                <div class="max-w-container-max mx-auto px-margin-desktop flex flex-col items-center text-center">
+                    <div class="reveal-on-scroll max-w-3xl">
+                        <h2 class="font-display-lg text-display-lg text-on-surface mb-8"
+                            data-i18n="home.reservationTitle">Reservieren Sie Ihren Tisch</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-12"
+                            data-i18n="home.reservationBody"></p>
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                            <a class="bg-bronze-glimmer text-on-primary px-16 py-6 font-label-lg text-label-lg uppercase tracking-[0.2em] hover:scale-105 transition-all duration-300 bronze-glow"
+                                href="https://www.foodbooking.com/api/res/8_yjp4" data-i18n="home.reservationPrimary">
+                                JETZT RESERVIEREN
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content active" id="menu">
+            <section class="relative h-[614px] flex items-center justify-center overflow-hidden pt-20">
+                <div class="absolute inset-0 z-0">
+                    <img class="w-full h-full object-cover brightness-50"
+                        src="./assets/images/site/hero-menu-sushi.png" />
+                </div>
+                <div class="relative z-10 text-center px-4">
+                    <span class="font-label-lg text-bronze-glimmer tracking-[0.3em] uppercase mb-4 block"
+                        data-i18n="menu.eyebrow">Kulinarische Meisterschaft</span>
+                    <h1 class="font-display-lg text-display-lg text-on-surface mb-6" data-i18n="nav.menu">Speisekarte
+                    </h1>
+                    <div class="w-24 h-1 bg-bronze-glimmer mx-auto"></div>
+                </div>
+            </section>
+
+            <section class="py-section-padding px-margin-desktop max-w-[800px] mx-auto text-center">
+                <p class="font-headline-md text-bronze-glimmer italic mb-8" data-i18n="menu.quote">"Qualität, die man
+                    schmeckt. Tradition, die man fühlt."</p>
+                <p class="font-body-lg text-on-surface-variant leading-relaxed" data-i18n="menu.intro"></p>
+            </section>
+
+            <section class="pb-section-padding px-margin-desktop max-w-container-max mx-auto">
+                <div class="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_360px] gap-10 items-start">
+                    <div class="space-y-12">
+                        <section class="glass-panel p-6 md:p-8">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8">
+                                <div>
+                                    <h2 class="font-headline-lg text-headline-lg text-on-surface"
+                                        data-i18n="book.title"></h2>
+                                </div>
+                            </div>
+                            <div class="menu-book-preview">
+                                <div class="book-spine" aria-hidden="true">
+                                    <span class="brand-mark">SESAMIE</span>
+                                    <small>Menu Ritual</small>
+                                </div>
+                                <div class="menu-book menu-book-trigger" data-menu-book></div>
+                                <button aria-label="Open menu book" class="book-preview-overlay" data-open-book-modal
+                                    type="button"></button>
+                            </div>
+                            <div class="book-stage-bottom mt-6">
+                                <span data-book-caption data-i18n="book.caption"></span>
+                                <div class="flex items-center gap-5">
+                                    <strong data-book-page-indicator>1 - 2</strong>
+                                    <button class="ghost-link" data-open-book-modal type="button"
+                                        data-i18n="book.expandLink">Buch gross offnen</button>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="glass-panel p-8 md:p-10 text-center">
+                            <p class="font-label-lg text-label-lg uppercase tracking-[0.3em] text-bronze-glimmer mb-4"
+                                data-i18n="menu.title">Online bestellen</p>
+                            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-6"
+                                data-i18n="menu.orderHeading">Für zu Hause genießen</h2>
+                            <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8"
+                                data-i18n="menu.subtitle"></p>
+                            <a class="inline-flex items-center justify-center bg-bronze-glimmer text-on-primary px-10 py-5 font-label-lg text-label-lg uppercase tracking-widest hover:opacity-80 transition-all active:scale-95 duration-150"
+                                href="https://www.foodbooking.com/api/fb/8_yjp4">
+                                <span data-i18n="menu.orderCta">Jetzt bestellen</span>
+                            </a>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="reservation">
+            <header class="relative pt-32 pb-20 overflow-hidden">
+                <div
+                    class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+                    <span class="font-label-lg text-label-lg text-bronze-glimmer uppercase mb-4 block"
+                        data-i18n="reservation.eyebrow">Exklusiv Genießen</span>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6"
+                        data-i18n="reservation.title">Ein Platz fur Genuss</h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"
+                        data-i18n="reservation.intro"></p>
+                </div>
+            </header>
+            <main class="relative px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-section-padding">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+                    <div
+                        class="lg:col-span-8 bg-surface-container p-8 md:p-12 border border-outline-variant/30 relative overflow-hidden group">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-bronze-glimmer/5 -mr-16 -mt-16 rounded-full blur-3xl group-hover:bg-bronze-glimmer/10 transition-all duration-700">
+                        </div>
+                        <form class="space-y-10 relative z-10" data-reservation-form hidden>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <div class="space-y-2 group">
+                                    <label
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest"
+                                        data-i18n="reservation.date">Datum</label>
+                                    <input
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300"
+                                        name="date" required="" type="date" />
+                                </div>
+                                <div class="space-y-2 group">
+                                    <label
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest"
+                                        data-i18n="reservation.time">Uhrzeit</label>
+                                    <input
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300"
+                                        name="time" required="" type="time" />
+                                </div>
+                                <div class="space-y-2 group">
+                                    <label
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest"
+                                        data-i18n="reservation.guests">Personenanzahl</label>
+                                    <input
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300"
+                                        min="1" name="guests" required="" type="number" />
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                                <div class="space-y-2 group">
+                                    <label
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest"
+                                        data-i18n="reservation.name">Vollständiger Name</label>
+                                    <input
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300 placeholder:text-outline-variant/50"
+                                        name="name" required="" type="text" />
+                                </div>
+                                <div class="space-y-2 group">
+                                    <label
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest"
+                                        data-i18n="reservation.phone">Telefonnummer</label>
+                                    <input
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300 placeholder:text-outline-variant/50"
+                                        name="phone" required="" type="tel" />
+                                </div>
+                                <div class="space-y-2 group md:col-span-2">
+                                    <label
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest"
+                                        data-i18n="reservation.note">Besondere Wünsche</label>
+                                    <input
+                                        class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-body-md form-input-focus transition-all duration-300 placeholder:text-outline-variant/50"
+                                        name="note" type="text" />
+                                </div>
+                            </div>
+                            <div class="pt-8">
+                                <button
+                                    class="w-full md:w-auto px-12 py-5 bg-bronze-glimmer text-on-surface-variant font-label-lg text-label-lg uppercase tracking-[0.2em] font-bold hover:bg-opacity-80 transition-all duration-300 active:scale-95"
+                                    data-i18n="reservation.submit" type="submit">
+                                    Jetzt Tisch Anfragen
+                                </button>
+                            </div>
+                        </form>
+                        <div class="space-y-8 relative z-10">
+                            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+                                data-i18n="reservation.externalBody"></p>
+                            <a class="inline-flex w-full md:w-auto items-center justify-center px-12 py-5 bg-bronze-glimmer text-on-surface-variant font-label-lg text-label-lg uppercase tracking-[0.2em] font-bold hover:bg-opacity-80 transition-all duration-300 active:scale-95"
+                                href="https://www.foodbooking.com/api/res/8_yjp4" data-i18n="reservation.submit">
+                                Jetzt Tisch Anfragen
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 space-y-gutter">
+                        <div class="relative h-64 w-full group overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                src="./assets/images/site/hero-reservation.jpg" />
+                            <div
+                                class="absolute inset-0 bg-surface/40 group-hover:bg-surface/20 transition-all duration-500">
+                            </div>
+                        </div>
+                        <div class="p-8 border-l-2 border-bronze-glimmer bg-earth-shadow/30">
+                            <h4 class="font-label-lg text-label-lg text-bronze-glimmer uppercase mb-2"
+                                data-i18n="reservation.questionsTitle"></h4>
+                            <p class="font-body-md text-on-surface mb-4" data-i18n="reservation.questionsBody"></p>
+                            <a class="font-body-md text-on-surface underline hover:text-bronze-glimmer transition-colors"
+                                data-business="email" data-business-link="email" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="tab-content" id="contact">
+            <main class="pt-32 pb-section-padding">
+                <section
+                    class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                    <div class="lg:col-span-5 space-y-gutter">
+                        <div class="glass-panel p-10 flex flex-col justify-between h-full min-h-[400px]">
+                            <div>
+                                <h2 class="font-headline-md text-headline-md text-on-surface mb-8"
+                                    data-i18n="contact.location">Standort</h2>
+                                <div class="space-y-6">
+                                    <div class="space-y-4">
+                                        <div
+                                            class="overflow-hidden border border-outline-variant/30 bg-surface-container-low">
+                                            <iframe class="block w-full h-[260px]" data-map-frame src="" loading="lazy"
+                                                referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+                                                title="SESAMIE map"></iframe>
+                                        </div>
+                                        <p class="font-body-md text-on-surface-variant" data-business="address"></p>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <span class="material-symbols-outlined text-bronze-glimmer mt-1">call</span>
+                                        <a class="font-body-lg text-body-lg" data-business="phoneDisplay"
+                                            data-business-link="phone" href="#"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-12 pt-12 border-t border-outline-variant/30">
+                                <h3 class="font-label-lg text-bronze-glimmer uppercase tracking-widest mb-6"
+                                    data-i18n="contact.opening">Öffnungszeiten</h3>
+                                <div class="space-y-3 font-body-md text-on-surface-variant" data-business-hours></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <div class="bg-surface-container p-10 h-full border border-outline-variant/10">
+                            <h2 class="font-headline-md text-headline-md text-on-surface mb-8"
+                                data-i18n="contact.messageTitle">Nachricht senden</h2>
+                            <form class="space-y-8">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div class="relative">
+                                        <label
+                                            class="block text-label-sm text-on-surface-variant uppercase mb-2">Name</label>
+                                        <input
+                                            class="w-full bg-surface-container-low border-0 border-b border-outline-variant py-3 px-0 bronze-glow text-on-surface placeholder:text-on-surface-variant/30 transition-all"
+                                            placeholder="Ihr vollständiger Name" type="text" />
+                                    </div>
+                                    <div class="relative">
+                                        <label
+                                            class="block text-label-sm text-on-surface-variant uppercase mb-2">E-Mail</label>
+                                        <input
+                                            class="w-full bg-surface-container-low border-0 border-b border-outline-variant py-3 px-0 bronze-glow text-on-surface placeholder:text-on-surface-variant/30 transition-all"
+                                            placeholder="ihre@mail.de" type="email" />
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <label
+                                        class="block text-label-sm text-on-surface-variant uppercase mb-2">Betreff</label>
+                                    <input
+                                        class="w-full bg-surface-container-low border-0 border-b border-outline-variant py-3 px-0 bronze-glow text-on-surface placeholder:text-on-surface-variant/30 transition-all"
+                                        placeholder="Worum geht es?" type="text" />
+                                </div>
+                                <div class="relative">
+                                    <label class="block text-label-sm text-on-surface-variant uppercase mb-2">Ihre
+                                        Nachricht</label>
+                                    <textarea
+                                        class="w-full bg-surface-container-low border-0 border-b border-outline-variant py-3 px-0 bronze-glow text-on-surface placeholder:text-on-surface-variant/30 transition-all resize-none"
+                                        placeholder="Wie können wir Ihnen helfen?" rows="4"></textarea>
+                                </div>
+                                <div class="pt-4">
+                                    <button
+                                        class="bg-bronze-glimmer text-on-primary font-label-lg px-12 py-4 tracking-widest hover:opacity-90 transition-all active:scale-95"
+                                        type="button" data-i18n="contact.messageSubmit">
+                                        NACHRICHT ABSCHICKEN
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-12 mt-12">
+                        <a class="glass-panel flex items-center justify-between gap-6 p-6 md:p-8 hover:border-bronze-glimmer/50 transition-colors"
+                            data-business-link="map" href="#">
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-on-surface mb-2">SESAMIE Ingolstadt
+                                </h4>
+                                <p class="font-body-md text-on-surface-variant" data-i18n="contact.route">Klicken
+                                    Sie, um die Route in Google Maps zu planen</p>
+                            </div>
+                            <span class="material-symbols-outlined text-bronze-glimmer text-3xl">north_east</span>
+                        </a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </main>
+
+    <footer class="bg-surface-container-lowest py-section-padding border-t border-outline-variant/10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+            <div class="space-y-6">
+                <div class="brand-mark font-headline-md text-headline-md text-bronze-glimmer">SESAMIE</div>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs leading-relaxed"
+                    data-i18n="footer.text"></p>
+            </div>
+            <div class="space-y-8">
+                <h4 class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface"
+                    data-i18n="contact.opening">Öffnungszeiten</h4>
+                <div class="space-y-4 font-body-md text-body-md text-on-surface-variant" data-business-hours></div>
+            </div>
+            <div class="space-y-8">
+                <h4 class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface"
+                    data-i18n="nav.contact">Kontakt</h4>
+                <address class="not-italic space-y-4 font-body-md text-body-md text-on-surface-variant">
+                    <p data-business="address"></p>
+                    <p>
+                        <a data-business="phoneDisplay" data-business-link="phone" href="#"></a><br />
+                        <a data-business="email" data-business-link="email" href="#"></a>
+                    </p>
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <div class="book-backdrop" data-book-backdrop hidden></div>
+    <div class="book-modal" data-book-modal aria-hidden="true">
+        <div class="book-modal-shell">
+            <div class="drawer-header">
+                <div>
+                    <p class="text-xs uppercase tracking-[0.28em] text-bronze-glimmer" data-i18n="book.modalEyebrow">
+                    </p>
+                    <h2 data-i18n="book.modalTitle"></h2>
+                </div>
+                <button aria-label="Close book" class="icon-button" data-close-book-modal type="button">&times;</button>
+            </div>
+            <p class="option-modal-copy" data-i18n="book.modalHint"></p>
+            <div class="book-stage-top modal-book-stage-top">
+                <strong data-book-page-indicator-modal>1 - 2</strong>
+                <div class="book-controls">
+                    <button aria-label="Previous pages" class="icon-button" data-book-prev
+                        type="button">&#8592;</button>
+                    <button aria-label="Next pages" class="icon-button" data-book-next type="button">&#8594;</button>
+                </div>
+            </div>
+            <div class="menu-book menu-book-modal" data-menu-book-modal></div>
+        </div>
+    </div>
+
+    <div class="toast" data-toast hidden></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+    <script src="./assets/js/app.js" type="module"></script>
+</body>
+
+</html>
