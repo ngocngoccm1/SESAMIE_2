@@ -138,9 +138,9 @@
         </div>
         <div
             class="md:hidden flex items-center gap-6 px-6 py-2 border-t border-outline-variant/30 overflow-x-auto no-scrollbar tab-links-mobile bg-surface/80">
-            <span class="tab-link font-label-sm text-label-sm uppercase tracking-widest text-on-surface" data-tab="home"
+            <span class="tab-link active font-label-sm text-label-sm uppercase tracking-widest text-on-surface" data-tab="home"
                 data-i18n="nav.home">Home</span>
-            <span class="tab-link active font-label-sm text-label-sm uppercase tracking-widest" data-tab="menu"
+            <span class="tab-link font-label-sm text-label-sm uppercase tracking-widest" data-tab="menu"
                 data-i18n="nav.menu">Speisekarte</span>
             <a class="tab-link font-label-sm text-label-sm uppercase tracking-widest text-on-surface"
                 href="https://www.foodbooking.com/api/res/8_yjp4" data-i18n="nav.reserve">Reservierung</a>
@@ -154,18 +154,13 @@
     </nav>
 
     <main>
-        <div class="tab-content" id="home">
+        <div class="tab-content active" id="home">
             <section class="relative h-screen flex items-center justify-center overflow-hidden">
                 <div class="absolute inset-0 z-0">
                     <img class="w-full h-full object-cover opacity-60" src="./assets/images/site/hero-home.jpg" />
                     <div class="absolute inset-0 bg-gradient-to-b from-surface/40 via-transparent to-surface"></div>
                 </div>
                 <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop">
-                    <span
-                        class="inline-block mb-6 font-label-lg text-label-lg uppercase tracking-[0.3em] text-bronze-glimmer"
-                        data-i18n="hero.eyebrow">
-                        COMING SOON
-                    </span>
                     <h1 class="brand-mark font-display-lg text-display-lg md:text-display-lg leading-tight mb-6 max-w-4xl mx-auto"
                         data-i18n="hero.title">
                         SESAMIE
@@ -246,7 +241,7 @@
             </section>
         </div>
 
-        <div class="tab-content active" id="menu">
+        <div class="tab-content" id="menu">
             <section class="relative h-[614px] flex items-center justify-center overflow-hidden pt-20">
                 <div class="absolute inset-0 z-0">
                     <img class="w-full h-full object-cover brightness-50"

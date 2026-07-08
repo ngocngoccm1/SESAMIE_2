@@ -28,10 +28,10 @@ export const UI_COPY = {
       contact: "Kontakt"
     },
     hero: {
-      eyebrow: "COMING SOON",
+      eyebrow: "",
       title: "SESAMIE",
       subtitle:
-        "Authentic Asian Food & Fresh Sushi\nIngolstadt\n\nWir bereiten gerade alles fur Sie vor - mit frischen Zutaten, viel Sorgfalt und Liebe zum Detail.",
+        "Authentic Asian Food & Fresh Sushi\nIngolstadt\n\nFrische Zutaten, viel Sorgfalt und Liebe zum Detail - direkt in Ingolstadt.",
       reserve: "Tisch reservieren",
       menu: "Menu Buch ansehen",
       order: "Online bestellen",
@@ -226,10 +226,10 @@ export const UI_COPY = {
       contact: "Contact"
     },
     hero: {
-      eyebrow: "COMING SOON",
+      eyebrow: "",
       title: "SESAMIE",
       subtitle:
-        "Authentic Asian Food & Fresh Sushi\nIngolstadt\n\nWe are getting everything ready for you - with fresh ingredients, great care and love for detail.",
+        "Authentic Asian Food & Fresh Sushi\nIngolstadt\n\nFresh ingredients, great care and love for detail - right here in Ingolstadt.",
       reserve: "Reserve a table",
       menu: "Open the menu book",
       order: "Order online",

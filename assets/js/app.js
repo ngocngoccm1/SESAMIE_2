@@ -95,11 +95,11 @@ function getMenuTabNameFromHash() {
   const hash = window.location.hash.replace("#", "").trim().toLowerCase();
   if (hash.startsWith("menu-section-")) return "menu";
   const allowedTabs = new Set(["home", "menu", "reservation", "contact"]);
-  return allowedTabs.has(hash) ? hash : "menu";
+  return allowedTabs.has(hash) ? hash : "home";
 }
 
 function setActiveTab(tabName, { updateHash = true, scrollToTop = true } = {}) {
-  const safeTab = ["home", "menu", "reservation", "contact"].includes(tabName) ? tabName : "menu";
+  const safeTab = ["home", "menu", "reservation", "contact"].includes(tabName) ? tabName : "home";
 
   elements.tabPanels.forEach((panel) => {
     panel.classList.toggle("active", panel.id === safeTab);
