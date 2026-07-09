@@ -58,7 +58,7 @@ export const UI_COPY = {
       reservationEyebrow: "Reservierung",
       reservationTitle: "Wir freuen uns auf Ihren Besuch",
       reservationBody:
-        "Ob bei uns im Restaurant oder zu Hause - genieBen Sie die Vielfalt asiatischer Kuche, frisch zubereitet und mit Sorgfalt serviert.",
+        "Ob bei uns im Restaurant oder zu Hause - genießen Sie die Vielfalt asiatischer Küche, frisch zubereitet und mit Sorgfalt serviert.",
       reservationPrimary: "Zur Reservierung",
       reservationSecondary: "Online bestellen"
     },
