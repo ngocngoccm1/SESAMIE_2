@@ -630,7 +630,8 @@ button {
 
 .drawer-backdrop,
 .option-backdrop,
-.book-backdrop {
+.book-backdrop,
+.menu-image-backdrop {
   position: fixed;
   inset: 0;
   z-index: 70;
@@ -640,7 +641,8 @@ button {
 
 .cart-drawer,
 .option-modal-card,
-.book-modal-shell {
+.book-modal-shell,
+.menu-image-modal-shell {
   background: var(--surface-panel-strong);
   border: 1px solid rgba(166, 124, 82, 0.16);
   box-shadow: var(--shadow-deep);
@@ -1038,7 +1040,8 @@ button {
 }
 
 .option-modal,
-.book-modal {
+.book-modal,
+.menu-image-modal {
   position: fixed;
   inset: 0;
   z-index: 80;
@@ -1051,7 +1054,8 @@ button {
 }
 
 .option-modal.is-open,
-.book-modal.is-open {
+.book-modal.is-open,
+.menu-image-modal.is-open {
   opacity: 1;
   pointer-events: auto;
 }
@@ -1090,6 +1094,21 @@ button {
   max-height: calc(100dvh - 2rem);
   overflow: auto;
   padding: 1.5rem;
+}
+
+.menu-image-modal-shell {
+  width: min(760px, 100%);
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  padding: 1.25rem;
+}
+
+.mittag-popup-image {
+  width: 100%;
+  max-height: calc(100dvh - 8rem);
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid rgba(166, 124, 82, 0.14);
 }
 
 .modal-book-stage-top {
@@ -1921,16 +1940,23 @@ button {
   }
 
   .book-modal-shell,
-  .option-modal-card {
+  .option-modal-card,
+  .menu-image-modal-shell {
     padding: 1rem;
   }
 
-  .book-modal-shell {
+  .book-modal-shell,
+  .menu-image-modal-shell {
     max-height: calc(100dvh - 1rem);
+  }
+
+  .mittag-popup-image {
+    max-height: calc(100dvh - 7rem);
   }
 
   .option-modal-card h2,
   .book-modal-shell h2,
+  .menu-image-modal-shell h2,
   .drawer-header h2 {
     font-size: 1.75rem;
   }
@@ -2120,6 +2146,7 @@ button {
   .glass-panel,
   .option-modal-card,
   .book-modal-shell,
+  .menu-image-modal-shell,
   .cart-drawer {
     border-radius: 18px;
   }
@@ -2150,7 +2177,8 @@ button {
 
   .drawer-header h2,
   .option-modal-card h2,
-  .book-modal-shell h2 {
+  .book-modal-shell h2,
+  .menu-image-modal-shell h2 {
     font-size: 1.55rem;
   }
 

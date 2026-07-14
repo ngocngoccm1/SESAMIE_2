@@ -10,7 +10,8 @@ const state = {
   cart: [],
   optionItem: null,
   bookPage: 0,
-  bookModalOpen: false
+  bookModalOpen: false,
+  menuImageModalOpen: false
 };
 
 const BOOK_PAGE_COUNT = 16;
@@ -64,6 +65,8 @@ const elements = {
   bookCaption: document.querySelector("[data-book-caption]"),
   bookBackdrop: document.querySelector("[data-book-backdrop]"),
   bookModal: document.querySelector("[data-book-modal]"),
+  menuImageBackdrop: document.querySelector("[data-menu-image-backdrop]"),
+  menuImageModal: document.querySelector("[data-menu-image-modal]"),
   orderUiBadge: document.querySelector("[data-order-ui-badge]"),
   orderUiTotal: document.querySelector("[data-order-ui-total]")
 };
@@ -738,6 +741,27 @@ function closeBookModal() {
   document.body.classList.remove("has-book-modal");
 }
 
+function openMenuImageModal() {
+  state.menuImageModalOpen = true;
+  if (elements.menuImageBackdrop) elements.menuImageBackdrop.hidden = false;
+  if (elements.menuImageModal) {
+    elements.menuImageModal.classList.add("is-open");
+    elements.menuImageModal.setAttribute("aria-hidden", "false");
+  }
+  document.body.classList.add("has-book-modal");
+  animatePanelOpen(document.querySelector(".menu-image-modal-shell"));
+}
+
+function closeMenuImageModal() {
+  state.menuImageModalOpen = false;
+  if (elements.menuImageBackdrop) elements.menuImageBackdrop.hidden = true;
+  if (elements.menuImageModal) {
+    elements.menuImageModal.classList.remove("is-open");
+    elements.menuImageModal.setAttribute("aria-hidden", "true");
+  }
+  document.body.classList.remove("has-book-modal");
+}
+
 function renderMenuCard(item, tagLabels, copy) {
   const hasVariants = item.variants.length > 0;
   const prices = hasVariants ? item.variants.map((variant) => variant.price) : item.price ? [item.price] : [];
@@ -1190,11 +1214,24 @@ function handleGlobalClick(event) {
     return;
   }
 
+  if (event.target.closest("[data-open-menu-image-modal]")) {
+    openMenuImageModal();
+    return;
+  }
+
   if (
     event.target.closest("[data-close-book-modal]") ||
     event.target.closest("[data-book-backdrop]")
   ) {
     closeBookModal();
+    return;
+  }
+
+  if (
+    event.target.closest("[data-close-menu-image-modal]") ||
+    event.target.closest("[data-menu-image-backdrop]")
+  ) {
+    closeMenuImageModal();
     return;
   }
 
@@ -1253,6 +1290,7 @@ function handleGlobalClick(event) {
 function handleGlobalKeydown(event) {
   if (event.key === "Escape") {
     if (state.bookModalOpen) closeBookModal();
+    if (state.menuImageModalOpen) closeMenuImageModal();
     if (state.optionItem) closeOptions();
     if (elements.cartDrawer.classList.contains("is-open")) closeCart();
     return;
