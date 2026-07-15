@@ -1154,6 +1154,9 @@ function handleGlobalClick(event) {
     if (tabName) {
       event.preventDefault();
       setActiveTab(tabName);
+      if (tabName === "menu") {
+        openMenuImageModal();
+      }
       return;
     }
   }
