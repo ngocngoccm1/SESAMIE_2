@@ -3482,11 +3482,60 @@
       ],
       "category": "Sushi",
       "name_original_schema": "Sushi Menü"
+    },
+    {
+      "name": "Mittagsangebot – Lunch Bowl",
+      "category": "Mittagsangebot",
+      "service_hours": "Mo.–Fr. 11:30–15:00 Uhr, außer an Feiertagen",
+      "items": [
+        { "name": "M1. Chicken Bowl", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Reis", "Salat", "Avocado", "Gurke", "Edamame", "Paprika", "Karotten", "Sesamsauce"] },
+        { "name": "M2. Duck Bowl", "price_display": "11,90", "price_eur": 11.9, "description": "Gebratene Barbarie-Ente", "ingredients": ["Reis", "Salat", "Avocado", "Gurke", "Edamame", "Paprika", "Karotten", "Sesamsauce"] },
+        { "name": "M3. Tofu Bowl", "price_display": "9,90", "price_eur": 9.9, "ingredients": ["Reis", "Salat", "Avocado", "Gurke", "Edamame", "Paprika", "Karotten", "Sesamsauce"], "tags": ["vegan"] }
+      ]
+    },
+    {
+      "name": "Mittagsangebot – SESAMIE Wok",
+      "category": "Mittagsangebot",
+      "service_hours": "Mo.–Fr. 11:30–15:00 Uhr, außer an Feiertagen",
+      "items": [
+        { "name": "M4. SESAMIE Chicken", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Gebratenes Gemüse", "SESAMIE Signature-Dunkelsauce", "Salat", "Reis"] },
+        { "name": "M5. SESAMIE Duck", "price_display": "11,90", "price_eur": 11.9, "description": "Gebratene Barbarie-Ente", "ingredients": ["Gebratenes Gemüse", "SESAMIE Signature-Dunkelsauce", "Salat", "Reis"] },
+        { "name": "M6. SESAMIE Tofu", "price_display": "9,90", "price_eur": 9.9, "ingredients": ["Gebratenes Gemüse", "SESAMIE Signature-Dunkelsauce", "Salat", "Reis"], "tags": ["vegan"] }
+      ]
+    },
+    {
+      "name": "Mittagsangebot – Pho Soup",
+      "category": "Mittagsangebot",
+      "service_hours": "Mo.–Fr. 11:30–15:00 Uhr, außer an Feiertagen",
+      "items": [
+        { "name": "M7. Pho Chicken", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Reisbandnudeln", "Rinder-Hühnerbrühe", "Frühlingszwiebeln", "Koriander"] },
+        { "name": "M8. Pho Beef", "price_display": "11,90", "price_eur": 11.9, "ingredients": ["Reisbandnudeln", "Rinder-Hühnerbrühe", "Frühlingszwiebeln", "Koriander"] },
+        { "name": "M9. Pho Tofu", "price_display": "9,90", "price_eur": 9.9, "ingredients": ["Reisbandnudeln", "Rinder-Hühnerbrühe", "Frühlingszwiebeln", "Koriander"], "tags": ["vegan"] }
+      ]
+    },
+    {
+      "name": "Mittagsangebot – Bun Salat",
+      "category": "Mittagsangebot",
+      "service_hours": "Mo.–Fr. 11:30–15:00 Uhr, außer an Feiertagen",
+      "items": [
+        { "name": "M10. Bun Chicken", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Reisnudeln", "Salat", "Gurke", "Karotten", "frische Kräuter", "Erdnüsse", "hausgemachtes Dressing"] },
+        { "name": "M11. Bun Duck", "price_display": "11,90", "price_eur": 11.9, "description": "Gebratene Barbarie-Ente", "ingredients": ["Reisnudeln", "Salat", "Gurke", "Karotten", "frische Kräuter", "Erdnüsse", "hausgemachtes Dressing"] },
+        { "name": "M12. Bun Tofu", "price_display": "9,90", "price_eur": 9.9, "ingredients": ["Reisnudeln", "Salat", "Gurke", "Karotten", "frische Kräuter", "Erdnüsse", "hausgemachtes Dressing"], "tags": ["vegan"] }
+      ]
+    },
+    {
+      "name": "Mittagsangebot – Sushi Set",
+      "category": "Sushi",
+      "service_hours": "Mo.–Fr. 11:30–15:00 Uhr, außer an Feiertagen",
+      "items": [
+        { "name": "S1. Mittag Basic Set", "price_display": "11,90", "price_eur": 11.9, "description": "8 Stk. Lachs Inside Out | 3 Stk. Nigiri (Lachs, Butterfisch, Tilapia)" },
+        { "name": "S2. Mittag Vegan Set", "price_display": "10,90", "price_eur": 10.9, "description": "8 Stk. Veggie Inside Out | 3 Stk. Nigiri (Avocado, Mango, Rettich)", "tags": ["vegan"] }
+      ]
     }
   ],
   "metadata": {
-    "section_count": 29,
-    "item_count": 216,
+    "section_count": 34,
+    "item_count": 230,
     "language": "de",
     "source_file": "menu SESAMIE Deutsch 3.pdf",
     "extraction_basis": "Structured from the German SESAMIE PDF, using the same detailed schema as the English extraction."

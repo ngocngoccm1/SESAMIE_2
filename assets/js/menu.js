@@ -62,7 +62,7 @@ function inferFilterKeys(sectionName, tags) {
   if (/tapas/.test(haystack)) result.add("tapas");
   if (/vegan/.test(haystack) || tags.includes("vegan")) result.add("vegan");
   if (/chef|empfehlung/.test(haystack) || tags.includes("recommended")) result.add("chef");
-  if (/hauptspeisen|main course|beilagen|sides|kinder|kid/.test(haystack)) result.add("mains");
+  if (/hauptspeisen|main course|beilagen|sides|kinder|kid|mittagsangebot|lunch/.test(haystack)) result.add("mains");
   if (/sushi|sashimi|roll|nigiri|maki/.test(haystack)) result.add("sushi");
   if (/dessert/.test(haystack)) result.add("dessert");
 
