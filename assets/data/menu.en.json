@@ -3457,7 +3457,7 @@
       "items": [
         { "name": "M1. Chicken Bowl", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Rice", "Salad", "Avocado", "Cucumber", "Edamame", "Bell pepper", "Carrots", "Sesame sauce"] },
         { "name": "M2. Duck Bowl", "price_display": "11,90", "price_eur": 11.9, "description": "Fried Barbary duck", "ingredients": ["Rice", "Salad", "Avocado", "Cucumber", "Edamame", "Bell pepper", "Carrots", "Sesame sauce"] },
-        { "name": "M3. Tofu Bowl", "price_display": "9,90", "price_eur": 9.9, "ingredients": ["Rice", "Salad", "Avocado", "Cucumber", "Edamame", "Bell pepper", "Carrots", "Sesame sauce"], "tags": ["vegan"] }
+        { "name": "M3. Veggie Bowl", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Rice", "Salad", "Avocado", "Cucumber", "Edamame", "Bell pepper", "Carrots", "Sesame sauce"], "tags": ["vegan"], "description": "Fried vegan chicken & tofu" }
       ]
     },
     {
@@ -3465,9 +3465,9 @@
       "category": "Lunch Offer",
       "service_hours": "Mon.–Fri. 11:30–15:00, except public holidays",
       "items": [
-        { "name": "M4. SESAMIE Chicken", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Stir-fried vegetables", "SESAMIE signature dark sauce", "Salad", "Rice"] },
-        { "name": "M5. SESAMIE Duck", "price_display": "11,90", "price_eur": 11.9, "description": "Fried Barbary duck", "ingredients": ["Stir-fried vegetables", "SESAMIE signature dark sauce", "Salad", "Rice"] },
-        { "name": "M6. SESAMIE Tofu", "price_display": "9,90", "price_eur": 9.9, "ingredients": ["Stir-fried vegetables", "SESAMIE signature dark sauce", "Salad", "Rice"], "tags": ["vegan"] }
+        { "name": "M4. SESAMIE Chicken", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Stir-fried vegetables", "SESAMIE signature dark sauce", "Salad", "Rice"], "tags": ["mildly_spicy"] },
+        { "name": "M5. SESAMIE Duck", "price_display": "11,90", "price_eur": 11.9, "description": "Fried Barbary duck", "ingredients": ["Stir-fried vegetables", "SESAMIE signature dark sauce", "Salad", "Rice"], "tags": ["mildly_spicy"] },
+        { "name": "M6. SESAMIE Veggie", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Stir-fried vegetables", "SESAMIE signature dark sauce", "Salad", "Rice"], "tags": ["vegan", "mildly_spicy"], "description": "Fried vegan chicken & tofu" }
       ]
     },
     {
@@ -3475,19 +3475,18 @@
       "category": "Lunch Offer",
       "service_hours": "Mon.–Fri. 11:30–15:00, except public holidays",
       "items": [
-        { "name": "M7. Pho Chicken", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Rice noodles", "Beef and chicken broth", "Spring onions", "Coriander"] },
-        { "name": "M8. Pho Beef", "price_display": "11,90", "price_eur": 11.9, "ingredients": ["Rice noodles", "Beef and chicken broth", "Spring onions", "Coriander"] },
-        { "name": "M9. Pho Tofu", "price_display": "9,90", "price_eur": 9.9, "ingredients": ["Rice noodles", "Beef and chicken broth", "Spring onions", "Coriander"], "tags": ["vegan"] }
+        { "name": "M7. Pho Chicken", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Rice noodles", "Beef and chicken broth", "Spring onions", "Coriander"], "tags": ["gluten_free"] },
+        { "name": "M8. Pho Beef", "price_display": "11,90", "price_eur": 11.9, "ingredients": ["Rice noodles", "Beef and chicken broth", "Spring onions", "Coriander"], "tags": ["gluten_free"] },
+        { "name": "M9. Pho Tofu", "price_display": "9,90", "price_eur": 9.9, "ingredients": ["Rice noodles", "Beef and chicken broth", "Spring onions", "Coriander"], "tags": ["vegan", "gluten_free"], "description": "with vegetables & mushrooms" }
       ]
     },
     {
-      "name": "Lunch Offer – Bun Salad",
+      "name": "Lunch Offer – Massaman Selection",
       "category": "Lunch Offer",
       "service_hours": "Mon.–Fri. 11:30–15:00, except public holidays",
       "items": [
-        { "name": "M10. Bun Chicken", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Rice noodles", "Salad", "Cucumber", "Carrots", "Fresh herbs", "Peanuts", "House-made dressing"] },
-        { "name": "M11. Bun Duck", "price_display": "11,90", "price_eur": 11.9, "description": "Fried Barbary duck", "ingredients": ["Rice noodles", "Salad", "Cucumber", "Carrots", "Fresh herbs", "Peanuts", "House-made dressing"] },
-        { "name": "M12. Bun Tofu", "price_display": "9,90", "price_eur": 9.9, "ingredients": ["Rice noodles", "Salad", "Cucumber", "Carrots", "Fresh herbs", "Peanuts", "House-made dressing"], "tags": ["vegan"] }
+        { "name": "M10. Chicken Massaman", "price_display": "10,90", "price_eur": 10.9, "ingredients": ["Peanut curry sauce", "Seasonal vegetables", "Salad", "Rice"], "tags": ["gluten_free"] },
+        { "name": "M11. Tofu Massaman", "price_display": "9,90", "price_eur": 9.9, "ingredients": ["Peanut curry sauce", "Seasonal vegetables", "Salad", "Rice"], "tags": ["gluten_free", "vegan"] }
       ]
     },
     {
@@ -3495,13 +3494,13 @@
       "category": "Sushi",
       "service_hours": "Mon.–Fri. 11:30–15:00, except public holidays",
       "items": [
-        { "name": "S1. Lunch Basic Set", "price_display": "11,90", "price_eur": 11.9, "description": "8 pcs. salmon inside out | 3 pcs. nigiri (salmon, butterfish, tilapia)" },
-        { "name": "S2. Lunch Vegan Set", "price_display": "10,90", "price_eur": 10.9, "description": "8 pcs. veggie inside out | 3 pcs. nigiri (avocado, mango, radish)", "tags": ["vegan"] }
+        { "name": "S1. Lunch Basic Set", "price_display": "11,90", "price_eur": 11.9, "description": "6 pcs. crunchy roll | 8 pcs. salmon maki" },
+        { "name": "S2. Lunch Vegan Set", "price_display": "10,90", "price_eur": 10.9, "description": "6 pcs. veggie crunchy roll | 8 pcs. kappa maki", "tags": ["vegan"] }
       ]
     }
   ],
   "metadata": {
     "section_count": 34,
-    "item_count": 230
+    "item_count": 229
   }
 }

@@ -519,6 +519,8 @@ button {
 }
 
 .menu-section-header h3 {
+  min-width: 0;
+  overflow-wrap: anywhere;
   margin: 0;
   font-family: "Inter", sans-serif;
   font-size: clamp(2rem, 2vw, 2.75rem);
@@ -1101,6 +1103,18 @@ button {
   max-height: calc(100dvh - 2rem);
   overflow: auto;
   padding: 1.25rem;
+}
+
+.menu-image-modal-shell .drawer-header > div {
+  min-width: 0;
+}
+
+.menu-image-modal-shell h2 {
+  overflow-wrap: anywhere;
+}
+
+.menu-image-modal-shell .icon-button {
+  flex-shrink: 0;
 }
 
 .mittag-popup-image {
